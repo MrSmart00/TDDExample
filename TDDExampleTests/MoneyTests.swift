@@ -10,7 +10,7 @@ import XCTest
 
 // TODO: [] $5 + 10CHF = $10
 // TODO: [*] $5 * 2 = $10
-// TODO: [*] amountをprivateにする
+// TODO: [] amountをprivateにする
 // TODO: [*] Dollarの副作用をどうする？
 // TODO: [] Moneyの丸め処理どうする？
 // TODO: [*] Equatable
@@ -19,7 +19,7 @@ import XCTest
 // TODO: [] 他のオブジェクトとの等価性比較
 // TODO: [*] 5CHF * 2 = 10CHF
 // TODO: [] DollarとFrancの重複
-// TODO: [] Equatableの一般化
+// TODO: [*] Equatableの一般化
 // TODO: [] timesの一般化
 
 class MoneyTests: XCTestCase {
@@ -43,6 +43,8 @@ class MoneyTests: XCTestCase {
     func testEquality() {
         XCTAssertTrue(Dollar(5) == Dollar(5))
         XCTAssertFalse(Dollar(5) == Dollar(6))
+        XCTAssertTrue(Franc(5) == Franc(5))
+        XCTAssertFalse(Franc(5) == Franc(6))
     }
     
     func testFrancMultiplication() {
