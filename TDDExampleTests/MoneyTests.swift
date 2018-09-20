@@ -17,6 +17,10 @@ import XCTest
 // TODO: [] hashCode()
 // TODO: [] nullとの等価性比較
 // TODO: [] 他のオブジェクトとの等価性比較
+// TODO: [*] 5CHF * 2 = 10CHF
+// TODO: [] DollarとFrancの重複
+// TODO: [] Equatableの一般化
+// TODO: [] timesの一般化
 
 class MoneyTests: XCTestCase {
     
@@ -39,5 +43,11 @@ class MoneyTests: XCTestCase {
     func testEquality() {
         XCTAssertTrue(Dollar(5) == Dollar(5))
         XCTAssertFalse(Dollar(5) == Dollar(6))
+    }
+    
+    func testFrancMultiplication() {
+        let five = Franc(5)
+        XCTAssertEqual(Franc(10), five.times(2))
+        XCTAssertEqual(Franc(15), five.times(3))
     }
 }
