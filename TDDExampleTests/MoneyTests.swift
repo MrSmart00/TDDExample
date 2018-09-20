@@ -21,6 +21,8 @@ import XCTest
 // TODO: [] DollarとFrancの重複
 // TODO: [*] Equatableの一般化
 // TODO: [] timesの一般化
+// TODO: [*] FrancとDollarを比較する
+// TODO: [] 通貨の概念
 
 class MoneyTests: XCTestCase {
     
@@ -45,6 +47,7 @@ class MoneyTests: XCTestCase {
         XCTAssertFalse(Dollar(5) == Dollar(6))
         XCTAssertTrue(Franc(5) == Franc(5))
         XCTAssertFalse(Franc(5) == Franc(6))
+        XCTAssertFalse(Franc(5) == Dollar(5))
     }
     
     func testFrancMultiplication() {
