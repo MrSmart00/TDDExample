@@ -15,6 +15,17 @@ class Money: Equatable {
         return lhs.amount == rhs.amount && type(of: lhs) == type(of: rhs)
     }
     
+    static func dollar(_ amount: Int) -> Money {
+        return Dollar(amount)
+    }
+    
+    static func franc(_ amount: Int) -> Money {
+        return Franc(amount)
+    }
+    
+    func times(_ multiplier: Int) -> Money {
+        return Money()
+    }
 }
 
 class Dollar: Money {
@@ -24,7 +35,7 @@ class Dollar: Money {
         self.amount = amount
     }
     
-    func times(_ multiplier: Int) -> Dollar {
+    override func times(_ multiplier: Int) -> Money {
         return Dollar(amount * multiplier)
     }
     
@@ -37,7 +48,7 @@ class Franc: Money {
         self.amount = amount
     }
     
-    func times(_ multiplier: Int) -> Franc {
+    override func times(_ multiplier: Int) -> Money {
         return Franc(amount * multiplier)
     }
     
