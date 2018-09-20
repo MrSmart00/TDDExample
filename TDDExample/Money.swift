@@ -10,9 +10,36 @@ import Foundation
 
 class Money: Equatable {
     
-    var amount: Int = 0
+    fileprivate var amount: Int = 0
     static func == (lhs: Money, rhs: Money) -> Bool {
         return lhs.amount == rhs.amount
     }
     
 }
+
+class Dollar: Money {
+    
+    init(_ amount: Int) {
+        super.init()
+        self.amount = amount
+    }
+    
+    func times(_ multiplier: Int) -> Dollar {
+        return Dollar(amount * multiplier)
+    }
+    
+}
+
+class Franc: Money {
+    
+    init(_ amount: Int) {
+        super.init()
+        self.amount = amount
+    }
+    
+    func times(_ multiplier: Int) -> Franc {
+        return Franc(amount * multiplier)
+    }
+    
+}
+

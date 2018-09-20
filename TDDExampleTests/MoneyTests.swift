@@ -10,7 +10,7 @@ import XCTest
 
 // TODO: [] $5 + 10CHF = $10
 // TODO: [*] $5 * 2 = $10
-// TODO: [] amountをprivateにする
+// TODO: [*] amountをprivateにする
 // TODO: [*] Dollarの副作用をどうする？
 // TODO: [] Moneyの丸め処理どうする？
 // TODO: [*] Equatable
