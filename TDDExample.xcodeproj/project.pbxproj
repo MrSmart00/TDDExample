@@ -14,10 +14,6 @@
 		C5B712D5215344C400DCDAA6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5B712D3215344C400DCDAA6 /* LaunchScreen.storyboard */; };
 		C5B712E0215344C400DCDAA6 /* TDDExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B712DF215344C400DCDAA6 /* TDDExampleTests.swift */; };
 		C5B712EB2153452900DCDAA6 /* MoneyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B712EA2153452900DCDAA6 /* MoneyTests.swift */; };
-		C5B712ED215347D200DCDAA6 /* Dollar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B712EC215347D200DCDAA6 /* Dollar.swift */; };
-		C5B712EE215347D200DCDAA6 /* Dollar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B712EC215347D200DCDAA6 /* Dollar.swift */; };
-		C5B712F0215381C600DCDAA6 /* Franc.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B712EF215381C600DCDAA6 /* Franc.swift */; };
-		C5B712F1215381C600DCDAA6 /* Franc.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B712EF215381C600DCDAA6 /* Franc.swift */; };
 		C5B712F32153849F00DCDAA6 /* Money.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B712F22153849F00DCDAA6 /* Money.swift */; };
 		C5B712F4215384C400DCDAA6 /* Money.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B712F22153849F00DCDAA6 /* Money.swift */; };
 /* End PBXBuildFile section */
@@ -44,8 +40,6 @@
 		C5B712DF215344C400DCDAA6 /* TDDExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TDDExampleTests.swift; sourceTree = "<group>"; };
 		C5B712E1215344C400DCDAA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C5B712EA2153452900DCDAA6 /* MoneyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyTests.swift; sourceTree = "<group>"; };
-		C5B712EC215347D200DCDAA6 /* Dollar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dollar.swift; sourceTree = "<group>"; };
-		C5B712EF215381C600DCDAA6 /* Franc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Franc.swift; sourceTree = "<group>"; };
 		C5B712F22153849F00DCDAA6 /* Money.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Money.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -91,8 +85,6 @@
 				C5B712CA215344C400DCDAA6 /* AppDelegate.swift */,
 				C5B712CC215344C400DCDAA6 /* ViewController.swift */,
 				C5B712F22153849F00DCDAA6 /* Money.swift */,
-				C5B712EC215347D200DCDAA6 /* Dollar.swift */,
-				C5B712EF215381C600DCDAA6 /* Franc.swift */,
 				C5B712CE215344C400DCDAA6 /* Main.storyboard */,
 				C5B712D1215344C400DCDAA6 /* Assets.xcassets */,
 				C5B712D3215344C400DCDAA6 /* LaunchScreen.storyboard */,
@@ -212,10 +204,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C5B712F0215381C600DCDAA6 /* Franc.swift in Sources */,
 				C5B712F32153849F00DCDAA6 /* Money.swift in Sources */,
 				C5B712CD215344C400DCDAA6 /* ViewController.swift in Sources */,
-				C5B712ED215347D200DCDAA6 /* Dollar.swift in Sources */,
 				C5B712CB215344C400DCDAA6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -224,10 +214,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C5B712F1215381C600DCDAA6 /* Franc.swift in Sources */,
 				C5B712F4215384C400DCDAA6 /* Money.swift in Sources */,
 				C5B712EB2153452900DCDAA6 /* MoneyTests.swift in Sources */,
-				C5B712EE215347D200DCDAA6 /* Dollar.swift in Sources */,
 				C5B712E0215344C400DCDAA6 /* TDDExampleTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
