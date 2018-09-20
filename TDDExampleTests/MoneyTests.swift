@@ -10,10 +10,10 @@ import XCTest
 
 // TODO: [] $5 + 10CHF = $10
 // TODO: [*] $5 * 2 = $10
-// TODO: [] amountをprivateにする
+// TODO: [*] amountをprivateにする
 // TODO: [*] Dollarの副作用をどうする？
 // TODO: [] Moneyの丸め処理どうする？
-// TODO: [] Equatable
+// TODO: [*] Equatable
 // TODO: [] hashCode()
 // TODO: [] nullとの等価性比較
 // TODO: [] 他のオブジェクトとの等価性比較
@@ -32,10 +32,8 @@ class MoneyTests: XCTestCase {
 
     func testMultiplication() {
         let five = Dollar(5)
-        var product = five.times(2)
-        XCTAssertEqual(10, product?.amount)
-        product = five.times(3)
-        XCTAssertEqual(15, product?.amount)
+        XCTAssertEqual(Dollar(10), five.times(2))
+        XCTAssertEqual(Dollar(15), five.times(3))
     }
     
     func testEquality() {

@@ -10,13 +10,13 @@ import Foundation
 
 class Dollar: Equatable {
     
-    var amount: Int = 0
+    private var amount: Int = 0
     
     init(_ amount: Int) {
         self.amount = amount
     }
     
-    func times(_ multiplier: Int) -> Dollar? {
+    func times(_ multiplier: Int) -> Dollar {
         return Dollar(amount * multiplier)
     }
     
