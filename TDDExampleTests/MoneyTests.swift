@@ -22,7 +22,7 @@ import XCTest
 // TODO: [*] Equatableの一般化
 // TODO: [] timesの一般化
 // TODO: [*] FrancとDollarを比較する
-// TODO: [] 通貨の概念
+// TODO: [*] 通貨の概念
 // TODO: [] testFrancMultiplicationを削除する？
 
 class MoneyTests: XCTestCase {
@@ -55,5 +55,10 @@ class MoneyTests: XCTestCase {
         let five = Money.franc(5)
         XCTAssertEqual(Money.franc(10), five.times(2))
         XCTAssertEqual(Money.franc(15), five.times(3))
+    }
+    
+    func testCurrency() {
+        XCTAssertEqual("USD", Money.dollar(1).currency)
+        XCTAssertEqual("CHF", Money.franc(1).currency)
     }
 }

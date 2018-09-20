@@ -11,45 +11,43 @@ import Foundation
 class Money: Equatable {
     
     fileprivate var amount: Int = 0
+    fileprivate(set) var currency: String?
+    
+    init(_ amount: Int, _ currency: String?) {
+        self.amount = amount
+        self.currency = currency
+    }
+
     static func == (lhs: Money, rhs: Money) -> Bool {
         return lhs.amount == rhs.amount && type(of: lhs) == type(of: rhs)
     }
     
     static func dollar(_ amount: Int) -> Money {
-        return Dollar(amount)
+        return Dollar(amount, "USD")
     }
     
     static func franc(_ amount: Int) -> Money {
-        return Franc(amount)
+        return Franc(amount, "CHF")
     }
     
     func times(_ multiplier: Int) -> Money {
-        return Money()
+        return Money(0, nil)
     }
+
 }
 
 class Dollar: Money {
     
-    init(_ amount: Int) {
-        super.init()
-        self.amount = amount
-    }
-    
     override func times(_ multiplier: Int) -> Money {
-        return Dollar(amount * multiplier)
+        return Money.dollar(amount * multiplier)
     }
     
 }
 
 class Franc: Money {
     
-    init(_ amount: Int) {
-        super.init()
-        self.amount = amount
-    }
-    
     override func times(_ multiplier: Int) -> Money {
-        return Franc(amount * multiplier)
+        return Money.franc(amount * multiplier)
     }
     
 }
