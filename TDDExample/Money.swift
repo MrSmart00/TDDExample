@@ -10,8 +10,8 @@ import Foundation
 
 class Money: Equatable {
     
-    fileprivate var amount: Int = 0
-    fileprivate(set) var currency: String?
+    private var amount: Int = 0
+    private(set) var currency: String?
     
     init(_ amount: Int, _ currency: String?) {
         self.amount = amount
@@ -23,11 +23,11 @@ class Money: Equatable {
     }
     
     static func dollar(_ amount: Int) -> Money {
-        return Dollar(amount, "USD")
+        return Money(amount, "USD")
     }
     
     static func franc(_ amount: Int) -> Money {
-        return Franc(amount, "CHF")
+        return Money(amount, "CHF")
     }
     
     func times(_ multiplier: Int) -> Money {
@@ -35,12 +35,3 @@ class Money: Equatable {
     }
 
 }
-
-class Dollar: Money {
-        
-}
-
-class Franc: Money {
-    
-}
-

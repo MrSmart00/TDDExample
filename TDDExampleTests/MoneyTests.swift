@@ -18,12 +18,12 @@ import XCTest
 // TODO: [] nullとの等価性比較
 // TODO: [] 他のオブジェクトとの等価性比較
 // TODO: [*] 5CHF * 2 = 10CHF
-// TODO: [] DollarとFrancの重複
+// TODO: [*] DollarとFrancの重複
 // TODO: [*] Equatableの一般化
 // TODO: [*] timesの一般化
 // TODO: [*] FrancとDollarを比較する
 // TODO: [*] 通貨の概念
-// TODO: [] testFrancMultiplicationを削除する？
+// TODO: [*] testFrancMultiplicationを削除する？
 
 class MoneyTests: XCTestCase {
     
@@ -46,24 +46,12 @@ class MoneyTests: XCTestCase {
     func testEquality() {
         XCTAssertTrue(Money.dollar(5) == Money.dollar(5))
         XCTAssertFalse(Money.dollar(5) == Money.dollar(6))
-        XCTAssertTrue(Money.franc(5) == Money.franc(5))
-        XCTAssertFalse(Money.franc(5) == Money.franc(6))
         XCTAssertFalse(Money.franc(5) == Money.dollar(5))
-    }
-    
-    func testFrancMultiplication() {
-        let five = Money.franc(5)
-        XCTAssertEqual(Money.franc(10), five.times(2))
-        XCTAssertEqual(Money.franc(15), five.times(3))
     }
     
     func testCurrency() {
         XCTAssertEqual("USD", Money.dollar(1).currency)
         XCTAssertEqual("CHF", Money.franc(1).currency)
-    }
-    
-    func testDifferentClassEquality() {
-        XCTAssert(Money(10, "CHF") == Franc(10, "CHF"))
     }
     
 }
