@@ -11,7 +11,7 @@ import XCTest
 // TODO: [] $5 + 10CHF = $10
 // TODO: [*] $5 * 2 = $10
 // TODO: [] amountをprivateにする
-// TODO: [] Dollarの副作用をどうする？
+// TODO: [*] Dollarの副作用をどうする？
 // TODO: [] Moneyの丸め処理どうする？
 
 class MoneyTests: XCTestCase {
@@ -28,7 +28,9 @@ class MoneyTests: XCTestCase {
 
     func testMultiplication() {
         let five = Dollar(5)
-        five.times(2)
-        XCTAssertEqual(10, five.amount)
+        var product = five.times(2)
+        XCTAssertEqual(10, product?.amount)
+        product = five.times(3)
+        XCTAssertEqual(15, product?.amount)
     }
 }
