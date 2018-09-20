@@ -13,6 +13,10 @@ import XCTest
 // TODO: [] amountをprivateにする
 // TODO: [*] Dollarの副作用をどうする？
 // TODO: [] Moneyの丸め処理どうする？
+// TODO: [*] equals()
+// TODO: [] hashCode()
+// TODO: [] nullとの等価性比較
+// TODO: [] 他のオブジェクトとの等価性比較
 
 class MoneyTests: XCTestCase {
     
@@ -32,5 +36,10 @@ class MoneyTests: XCTestCase {
         XCTAssertEqual(10, product?.amount)
         product = five.times(3)
         XCTAssertEqual(15, product?.amount)
+    }
+    
+    func testEquality() {
+        XCTAssertTrue(Dollar(5).equals(Dollar(5)))
+        XCTAssertFalse(Dollar(5).equals(Dollar(6)))
     }
 }
