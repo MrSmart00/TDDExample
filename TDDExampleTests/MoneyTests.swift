@@ -20,7 +20,7 @@ import XCTest
 // TODO: [*] 5CHF * 2 = 10CHF
 // TODO: [] DollarとFrancの重複
 // TODO: [*] Equatableの一般化
-// TODO: [] timesの一般化
+// TODO: [*] timesの一般化
 // TODO: [*] FrancとDollarを比較する
 // TODO: [*] 通貨の概念
 // TODO: [] testFrancMultiplicationを削除する？
@@ -61,4 +61,9 @@ class MoneyTests: XCTestCase {
         XCTAssertEqual("USD", Money.dollar(1).currency)
         XCTAssertEqual("CHF", Money.franc(1).currency)
     }
+    
+    func testDifferentClassEquality() {
+        XCTAssert(Money(10, "CHF") == Franc(10, "CHF"))
+    }
+    
 }
