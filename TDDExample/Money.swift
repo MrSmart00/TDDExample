@@ -10,10 +10,10 @@ import Foundation
 
 class Money: Expression, Equatable {
     
-    private var amount: Int = 0
-    private(set) var currency: String?
+    private(set) var amount: Int = 0
+    private(set) var currency: String
     
-    init(_ amount: Int, _ currency: String?) {
+    init(_ amount: Int, _ currency: String) {
         self.amount = amount
         self.currency = currency
     }
@@ -34,7 +34,11 @@ class Money: Expression, Equatable {
         return Money(amount * multiplier, currency)
     }
 
-    func plus(_ added: Money) -> Expression {
-        return Money(amount + added.amount, currency)
+    func plus(_ addend: Money) -> Expression {
+        return Sum(self, addend)
+    }
+    
+    func reduce(_ to: String) -> Money {
+        return self
     }
 }

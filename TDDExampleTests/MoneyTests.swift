@@ -10,6 +10,10 @@ import XCTest
 
 // TODO: [] $5 + 10CHF = $10
 // TODO: [] $5 + $5 = $10
+// TODO: [] $5 + $5がMoneyを返す
+// TODO: [*] Bank.reduce(Money)
+// TODO: [] Moneyを変換して換算を行う
+// TODO: [] Reduce(Bank, String)
 
 class MoneyTests: XCTestCase {
     
@@ -46,5 +50,26 @@ class MoneyTests: XCTestCase {
         let bank = Bank()
         let reduced = bank.reduce(sum, "USD")
         XCTAssert(Money.dollar(10) == reduced)
+    }
+    
+    func testPlusReturnSum() {
+        let five = Money.dollar(5)
+        let result = five.plus(five)
+        let sum = result as! Sum
+        XCTAssert(five == sum.augend)
+        XCTAssert(five == sum.addend)
+    }
+    
+    func testReduceSum() {
+        let sum: Expression = Sum(Money.dollar(3), Money.dollar(4))
+        let bank = Bank()
+        let result = bank.reduce(sum, "USD")
+        XCTAssert(Money.dollar(7) == result)
+    }
+    
+    func testReduceMoney() {
+        let bank = Bank()
+        let result = bank.reduce(Money.dollar(1), "USD")
+        XCTAssert(Money.dollar(1) == result)
     }
 }

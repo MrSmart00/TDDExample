@@ -8,6 +8,6 @@
 
 import Foundation
 
-class Expression {
-    
+protocol Expression {
+    func reduce(_ to: String) -> Money
 }
