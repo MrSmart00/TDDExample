@@ -9,11 +9,11 @@
 import XCTest
 
 // TODO: [] $5 + 10CHF = $10
-// TODO: [] $5 + $5 = $10
+// TODO: [*] $5 + $5 = $10
 // TODO: [] $5 + $5がMoneyを返す
 // TODO: [*] Bank.reduce(Money)
-// TODO: [] Moneyを変換して換算を行う
-// TODO: [] Reduce(Bank, String)
+// TODO: [*] Moneyを変換して換算を行う
+// TODO: [*] Reduce(Bank, String)
 
 class MoneyTests: XCTestCase {
     
@@ -71,5 +71,16 @@ class MoneyTests: XCTestCase {
         let bank = Bank()
         let result = bank.reduce(Money.dollar(1), "USD")
         XCTAssert(Money.dollar(1) == result)
+    }
+    
+    func testReduceMoneyDifferentCurrency() {
+        let bank = Bank()
+        bank.addRate("CHF", "USD", 2)
+        let result = bank.reduce(Money.franc(2), "USD")
+        XCTAssert(Money.dollar(1) == result)
+    }
+    
+    func testIdentityRate() {
+        XCTAssert(1 == Bank().rate("USD", to: "USD"))
     }
 }

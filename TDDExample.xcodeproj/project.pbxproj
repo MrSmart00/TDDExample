@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C56856CA215C6DAE0069BAF2 /* Pair.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B137B0215B86EA00BDC12B /* Pair.swift */; };
 		C5B137A6215B756800BDC12B /* Expression.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B137A5215B756800BDC12B /* Expression.swift */; };
 		C5B137A8215B758800BDC12B /* Bank.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B137A7215B758800BDC12B /* Bank.swift */; };
 		C5B137A9215B75FB00BDC12B /* Expression.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B137A5215B756800BDC12B /* Expression.swift */; };
 		C5B137AA215B75FB00BDC12B /* Bank.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B137A7215B758800BDC12B /* Bank.swift */; };
 		C5B137AC215B78A300BDC12B /* Sum.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B137AB215B78A300BDC12B /* Sum.swift */; };
 		C5B137AD215B7C3800BDC12B /* Sum.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B137AB215B78A300BDC12B /* Sum.swift */; };
+		C5B137B1215B86EA00BDC12B /* Pair.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B137B0215B86EA00BDC12B /* Pair.swift */; };
 		C5B712CB215344C400DCDAA6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B712CA215344C400DCDAA6 /* AppDelegate.swift */; };
 		C5B712CD215344C400DCDAA6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B712CC215344C400DCDAA6 /* ViewController.swift */; };
 		C5B712D0215344C400DCDAA6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5B712CE215344C400DCDAA6 /* Main.storyboard */; };
@@ -38,6 +40,7 @@
 		C5B137A5215B756800BDC12B /* Expression.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expression.swift; sourceTree = "<group>"; };
 		C5B137A7215B758800BDC12B /* Bank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bank.swift; sourceTree = "<group>"; };
 		C5B137AB215B78A300BDC12B /* Sum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sum.swift; sourceTree = "<group>"; };
+		C5B137B0215B86EA00BDC12B /* Pair.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pair.swift; sourceTree = "<group>"; };
 		C5B712C7215344C400DCDAA6 /* TDDExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TDDExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5B712CA215344C400DCDAA6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C5B712CC215344C400DCDAA6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -97,6 +100,7 @@
 				C5B137A5215B756800BDC12B /* Expression.swift */,
 				C5B137A7215B758800BDC12B /* Bank.swift */,
 				C5B137AB215B78A300BDC12B /* Sum.swift */,
+				C5B137B0215B86EA00BDC12B /* Pair.swift */,
 				C5B712CE215344C400DCDAA6 /* Main.storyboard */,
 				C5B712D1215344C400DCDAA6 /* Assets.xcassets */,
 				C5B712D3215344C400DCDAA6 /* LaunchScreen.storyboard */,
@@ -221,6 +225,7 @@
 				C5B137A8215B758800BDC12B /* Bank.swift in Sources */,
 				C5B712CB215344C400DCDAA6 /* AppDelegate.swift in Sources */,
 				C5B137A6215B756800BDC12B /* Expression.swift in Sources */,
+				C5B137B1215B86EA00BDC12B /* Pair.swift in Sources */,
 				C5B137AC215B78A300BDC12B /* Sum.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -234,6 +239,7 @@
 				C5B137AA215B75FB00BDC12B /* Bank.swift in Sources */,
 				C5B712E0215344C400DCDAA6 /* TDDExampleTests.swift in Sources */,
 				C5B137A9215B75FB00BDC12B /* Expression.swift in Sources */,
+				C56856CA215C6DAE0069BAF2 /* Pair.swift in Sources */,
 				C5B137AD215B7C3800BDC12B /* Sum.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
