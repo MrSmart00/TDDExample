@@ -9,9 +9,6 @@
 import Foundation
 
 class Sum: Expression {
-    func plus(_ addend: Expression) -> Expression {
-        return self // FIXME: Swiftではここでnilを返せない
-    }
     
     var augend: Expression
     var addend: Expression
@@ -19,7 +16,15 @@ class Sum: Expression {
         self.augend = augend
         self.addend = addend
     }
+
+    func times(_ multiplier: Int) -> Expression {
+        return Sum(augend.times(multiplier), addend.times(multiplier))
+    }
     
+    func plus(_ addend: Expression) -> Expression {
+        return Sum(self, addend)
+    }
+
     func reduce(_ bank: Bank, _ to: String) -> Money {
         let amount = augend.reduce(bank, to).amount + addend.reduce(bank, to).amount
         return Money(amount, to)
