@@ -30,11 +30,11 @@ class Money: Expression, Equatable {
         return Money(amount, "CHF")
     }
     
-    func times(_ multiplier: Int) -> Money {
+    func times(_ multiplier: Int) -> Expression {
         return Money(amount * multiplier, currency)
     }
 
-    func plus(_ addend: Money) -> Expression {
+    func plus(_ addend: Expression) -> Expression {
         return Sum(self, addend)
     }
     

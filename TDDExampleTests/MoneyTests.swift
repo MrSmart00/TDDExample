@@ -14,6 +14,8 @@ import XCTest
 // TODO: [*] Bank.reduce(Money)
 // TODO: [*] Moneyを変換して換算を行う
 // TODO: [*] Reduce(Bank, String)
+// TODO: [] Sum.plus
+// TODO: [] Expression.times
 
 class MoneyTests: XCTestCase {
     
@@ -29,8 +31,8 @@ class MoneyTests: XCTestCase {
 
     func testMultiplication() {
         let five = Money.dollar(5)
-        XCTAssertEqual(Money.dollar(10), five.times(2))
-        XCTAssertEqual(Money.dollar(15), five.times(3))
+        XCTAssertEqual(Money.dollar(10), five.times(2) as! Money)    // MARK: Swiftではclassとprotocolの比較はできない
+        XCTAssertEqual(Money.dollar(15), five.times(3) as! Money)    // MARK: Swiftではclassとprotocolの比較はできない
     }
     
     func testEquality() {
@@ -56,8 +58,8 @@ class MoneyTests: XCTestCase {
         let five = Money.dollar(5)
         let result = five.plus(five)
         let sum = result as! Sum
-        XCTAssert(five == sum.augend)
-        XCTAssert(five == sum.addend)
+        XCTAssert(five == sum.augend as! Money)     // MARK: Swiftではclassとprotocolの比較はできない
+        XCTAssert(five == sum.addend as! Money)     // MARK: Swiftではclassとprotocolの比較はできない
     }
     
     func testReduceSum() {
@@ -82,5 +84,14 @@ class MoneyTests: XCTestCase {
     
     func testIdentityRate() {
         XCTAssert(1 == Bank().rate("USD", to: "USD"))
+    }
+    
+    func testMixedAddition() {
+        let fiveBucks = Money.dollar(5)
+        let tenFrancs = Money.franc(10)
+        let bank = Bank()
+        bank.addRate("CHF", "USD", 2)
+        let result = bank.reduce(fiveBucks.plus(tenFrancs), "USD")
+        XCTAssert(Money.dollar(10) == result)
     }
 }
